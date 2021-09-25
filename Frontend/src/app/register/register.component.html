@@ -1,0 +1,35 @@
+<div id="image">
+<div class="registration-form">
+    <h1>Registraion Form</h1>
+    <form action="home" #userregister="ngForm" (ngSubmit)="registerVerify()">
+      <div class="form-group">
+
+        <p>First Name:</p>
+        <input type="text" name="firstname" placeholder="First Name" id="firstname" class="form-control"
+        [(ngModel)]="user.fname" required >
+
+        <p>Last Name:</p>
+        <input type="text" name="lastname" placeholder="Last Name" id="secondname" class="form-control"
+        [(ngModel)]="user.lname" >
+
+        <p>Email:</p>
+        <input type="email" name="email" placeholder="Email" id="email" class="form-control"
+        pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$"
+        [(ngModel)]="user.email" required #email ="ngModel" [class.is.invalid]="email.invalid && email.touched">
+
+        <p>Contact Number:</p>
+        <input type="text" name="contactnumber" placeholder="Phone Number" id="contactnumber" class="form-control"
+        [(ngModel)]="user.pnumber" required minlength="10"> 
+        
+        <p>Password:</p>
+        <input type="password" name="password" placeholder="Password" id="password" class="form-control"
+        [(ngModel)]="user.pwd" minlength="6" required>
+   
+        <button type="submit" [disabled]="userregister.form.invalid" style="cursor: pointer;">Register</button>
+      </div>
+    </form>
+</div>
+</div>
+
+
+

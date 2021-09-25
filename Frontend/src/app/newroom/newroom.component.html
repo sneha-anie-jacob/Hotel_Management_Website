@@ -1,0 +1,52 @@
+<div class='card'>
+    <form (ngSubmit)="AddRoom()" class='bg-pic'>
+<div class='card-header'>
+ ADD ROOM
+</div>
+
+<div class='card-header'>
+  <button type="button" routerLink="/editrooms" class="btn btn-success">EDIT ROOMS</button>
+ 
+
+</div>
+
+<div class='card-body'>            
+  <div class='table-responsive'>
+    <table class='table'>       
+    
+      <tbody>  
+          <tr>
+              <td> <label>Room Id</label></td>
+              <td><input type="text" name="r_id" [(ngModel)]="roomItem.roomId"/></td>                  
+            </tr> 
+
+            <tr>
+                <td><label>Room Name</label></td>
+                <td><input type="text" name="r_name" [(ngModel)]="roomItem.roomName"/></td>                  
+              </tr>  
+               
+              <tr>
+                <td><label>Room Description</label></td>
+                <td><input type="text" name="r_desc" [(ngModel)]="roomItem.description"/></td>                  
+              </tr>  
+
+              <tr>
+                <td> <label>Room Price</label></td>
+                <td><input type="text" name="r_price" [(ngModel)]="roomItem.price"/></td>                  
+              </tr> 
+ 
+              <tr>
+                <td><label>Room imageUrl</label></td>
+                <td><input type="text" name="r_image" [(ngModel)]="roomItem.imageUrl"/></td>                  
+              </tr>  
+
+              <tr>
+                <td></td>
+                <td><input type="submit" value="Submit" /></td>                  
+              </tr>             
+      </tbody>
+    </table>
+  </div>
+</div>
+</form>
+</div>

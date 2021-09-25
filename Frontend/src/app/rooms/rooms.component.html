@@ -1,0 +1,81 @@
+<!-- <div class='card'>
+    <div class='card-header'>
+     {{pageTitle}}
+    </div>
+    
+    <div class='card-body'>            
+      <div class='table-responsive'>
+        <table class='table bg-pic'
+              *ngIf = 'rooms && rooms.length'>
+          <thead>
+            <tr>
+              <th>
+                <button class='btn btn-primary'
+                (click)='toggleImage()'>
+                  {{showImage? 'Hide' : 'Show'}} Image
+                </button>
+              </th>
+              <th>Name</th>
+              <th>Description</th>
+              <th>Price</th>
+            </tr>
+           
+          </thead>
+          <tbody>  
+              <tr *ngFor='let room of rooms'>
+                  <td><img *ngIf='showImage'
+                    [src] = 'room.imageUrl' 
+                    [title] = 'room.roomName'
+                    [style.width.px] = 'imageWidth' 
+                    [style.margin.px] = 'imageMargin'></td>
+                  <td>{{ room.roomName|uppercase }}</td>
+                  
+                  <td>{{ room.description }}</td>
+                  <td>{{ room.price|currency:'USD' }}</td>
+                  
+                  <td>
+                    <button class="btn btn-warning" style="cursor:pointer"  style="margin-left: 20px;"> Edit</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-danger" style="cursor:pointer" > Delete</button>
+                  </td>
+                </tr>              
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+   -->
+
+
+   <div class="col-md-2"></div>
+    <div class="col-md-4">
+      <table class="table table-stripped table-bordered">
+        <thead>
+        <tr>
+            <th>Room ID</th>
+            <th>Room Type</th>
+            <th>Bedding Type</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <!-- <tbody>
+          <tr *ngFor="let beddingtype of bedding; let index=index">
+            <td>{{beddingtype.bedid}}</td>
+            <td>{{index + 1}}</td>
+            <td>{{beddingtype.category}}</td>
+            <td>{{beddingtype.beddingtype}}</td> -->
+            <td>
+                <button  class="btn btn-danger" >
+                  <i class="glyphicon glyphicon-trash"></i>
+                </button>
+                
+            </td>
+        <!-- </tr>
+        </tbody> -->
+    </table>
+    </div>
+
+    <div class="col-md-1"></div>
+
+
